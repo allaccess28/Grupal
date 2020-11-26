@@ -116,7 +116,7 @@ function myFunction() {
         
         text.style.display = "none";
     }
-    if (cont=0){
+    if (cont==0){
         alert("Seleccione al menos una opcion");
     }
     }
