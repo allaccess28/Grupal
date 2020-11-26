@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet" type="text/css">
+    <title>Crear Usuario</title>
+</head>
+
+<body>
+    <h2 align="center">Ingrese datos del Usuario:</h2>
+		<form action="listadousuarios.html" method="get">
+              <input type="text" name="nombres" size="40" placeholder="Ingrese nombres">
+              <br><br>
+              <input type="text" name="apellidos" size="40" placeholder="Ingrese apellidos">
+              <br><br>
+              <label for="fechanac">Fecha de Nacimiento</label> 
+              <input type="date" id="fechanac">
+              <br><br>
+              <select name="Tipo de Usuario">
+                  <option>Cliente</option>
+                  <option>Administrativo</option>
+                  <option>Profesional</option>
+              </select>
+              
+              <br><br>
+  			<input type="submit" value="Enviar">
+    		<input type="reset" value="Borrar">
+ 		</form>
+
+
+
+    
+</body>
+</html>
