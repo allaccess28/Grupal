@@ -22,11 +22,14 @@ function myFunction() {
     var checkBox = document.getElementById("myCheck");
     // Get the output text
     var text = document.getElementById("text");
+    var cont = 0;
 
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
         text.style.display = "block";
+        cont+1;
     } else {
+        cont=0;
         text.style.display = "none";
     }
 
@@ -36,7 +39,9 @@ function myFunction() {
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
         text.style.display = "block";
+        cont+1;
     } else {
+        cont=0;
         text.style.display = "none";
     }
     var checkBox = document.getElementById("myCheck3");
@@ -46,7 +51,9 @@ function myFunction() {
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
         text.style.display = "block";
+        cont+1;
     } else {
+        cont=0;
         text.style.display = "none";
     }
     var checkBox = document.getElementById("myCheck4");
@@ -56,7 +63,9 @@ function myFunction() {
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
         text.style.display = "block";
+        cont+1;
     } else {
+        cont=0;
         text.style.display = "none";
     }
     var checkBox = document.getElementById("myCheck5");
@@ -66,7 +75,9 @@ function myFunction() {
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
         text.style.display = "block";
+        cont+1;
     } else {
+        cont=0;
         text.style.display = "none";
     }
     var checkBox = document.getElementById("myCheck6");
@@ -76,7 +87,9 @@ function myFunction() {
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
         text.style.display = "block";
+        cont+1;
     } else {
+        cont=0;
         text.style.display = "none";
     }
     var checkBox = document.getElementById("myCheck7");
@@ -86,8 +99,9 @@ function myFunction() {
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
         text.style.display = "block";
+        cont+1;
     } else {
-        
+        cont=0;
         text.style.display = "none";
     }
     var checkBox = document.getElementById("myCheck8");
@@ -97,11 +111,12 @@ function myFunction() {
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
         text.style.display = "block";
+        cont+1;
     } else {
-        
+        cont=0;
         text.style.display = "none";
     }
-    /*if (checkBox.checked==false){
+    if (cont=0){
         alert("Seleccione al menos una opcion");
-    }*/
+    }
     }
