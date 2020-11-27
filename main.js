@@ -119,4 +119,6 @@ function myFunction() {
     if (cont==0){
         alert("Seleccione al menos una opcion");
     }
-    }
+}
+
+
