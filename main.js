@@ -126,3 +126,13 @@ var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Vie
 var f=new Date();
 document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
 
+function validacionpago(){
+    var payment= document.getElementById("monto").value;
+    if (payment < 0 || payment == null || payment==" "){
+        alert("Error campo vacío")
+    } else if ( payment >= 0 && payment <= 99999999 ){
+        alert("Usted ha ingresado el monto correctamente");
+    }
+       
+ 
+
