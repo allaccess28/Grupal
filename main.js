@@ -129,13 +129,13 @@ document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.ge
 function validacionpago(){
     var payment= document.getElementById("monto").value;
     var rut=document.getElementById("rutero").value;
-    if (payment < 0 || payment == null || payment==" "){
+    if (payment == 0 || payment == null || payment==" "){
         alert("Error campo vacío");
     } else if ( payment < 0 && payment > 99999999 ){
         alert("Monto Incorrecto");
     }else if (rut==0 || rut==" " || rut==null){
         alert("Campo rut vacio");
-    }else if (rut.legnth<8 && rut.legnth>9){
+    }else if (rut.legnth!=9){
         alert("el rut es incorrecto");
     }else{
         alert("validado")
