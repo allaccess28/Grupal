@@ -135,7 +135,7 @@ function validacionpago(){
         alert("Monto Incorrecto");
     }else if (rut==0 || rut==" " || rut==null){
         alert("Campo rut vacio");
-    }else if (rut.legnth!=9){
+    }else if (rut.legnth<8 || rut.legnth>10){
         alert("el rut es incorrecto");
     }else{
         alert("validado")
