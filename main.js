@@ -120,7 +120,7 @@ function myFunction() {
         alert("Seleccione al menos una opcion");
     }
 }
-
+var fechacompleta=document.getElementById("fechas");
 var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
 var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
 var f=new Date();
@@ -135,49 +135,50 @@ function validacionpago(){
     var coloranio=document.getElementById("anio");
     var datames=document.getElementById("mes").value;
     var colormes=document.getElementById("mes");
-    /*validacion pago como campo vacio*/
-    if (payment == 0 || payment == null || payment==" "){
-        alert("Error campos vacíos");
-        colormonto.style.backgroundColor= "red";
+    if {/*validacion pago como campo vacio*/
+        if (payment == 0 || payment == null || payment==" "){
+            alert("Error campos vacíos");
+            colormonto.style.backgroundColor= "red";
+            
+        /*validacion pago como texto*/
+        } else if(isNaN(payment)){
+            alert("La cantidad no es un numero");
+            colormonto.style.backgroundColor="red";
+
+        /*validacion pago como monto incorrecto*/
+        }else {var paymentnum = parseInt(payment);
+            if ( paymentnum < 0 || paymentnum > 99999999 ){
+            alert("Monto Incorrecto");}
+            colormonto.style.backgroundColor="red";
+        }
         
-    /*validacion pago como texto*/
-    } else if(isNaN(payment)){
-        alert("La cantidad no es un numero");
-        colormonto.style.backgroundColor="red";
+        if(datames == "- Mes -"){
+            alert("No ha seleccionado un Mes");
+            colormes.style.backgroundColor="red";
+        }else{colormes.style.backgroundColor="white";}
 
-    /*validacion pago como monto incorrecto*/
-    }else {var paymentnum = parseInt(payment);
-        if ( paymentnum < 0 || paymentnum > 99999999 ){
-        alert("Monto Incorrecto");}
-        colormonto.style.backgroundColor="red";
-    }
-    
-    if(datames == "- Mes -"){
-        alert("No ha seleccionado un Mes");
-        colormes.style.backgroundColor="red";
-    }else{
-    if(datanio == "- Año -"){
-        alert("No ha seleccionado un Año");
-        coloranio.style.backgroundColor="red";
-    }else {
-    
-    /*validacion rut como campo vacio*/
-    if (rut==0 || rut==" " || rut==null){
-        alert("Campo rut vacio");
-        colorrut.style.backgroundColor="red";
+        if(datanio == "- Año -"){
+            alert("No ha seleccionado un Año");
+            coloranio.style.backgroundColor="red";
+        }else{coloranio.style.backgroundColor="white";}
+        
+        /*validacion rut como campo vacio*/
+        if (rut==0 || rut==" " || rut==null){
+            alert("Campo rut vacio");
+            colorrut.style.backgroundColor="red";
 
-    /*validacion rut como rango de numero*/
-    }else {var rutnum = parseInt(rut);
-        if (rutnum<999999 || rutnum.legnth>99999999){
-        alert("el rut es incorrecto");
-        colorrut.style.backgroundColor="red";
-    }else{alert("Formulario validado");
+        /*validacion rut como rango de numero*/
+        }else {var rutnum = parseInt(rut);
+            if (rutnum<999999 || rutnum.legnth>99999999){
+            alert("el rut es incorrecto");
+            colorrut.style.backgroundColor="red";
+        }
+    }else  {  alert("Formulario validado");
     colormonto.style.backgroundColor= "white";
     colormes.style.backgroundColor="white";
     coloranio.style.backgroundColor="white";
     colorrut.style.backgroundColor="white";}
-        
-    }}}
+    
    
 }    
   
