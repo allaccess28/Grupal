@@ -129,19 +129,39 @@ document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.ge
 function validacionpago(){
     var payment= document.getElementById("monto").value;
     var rut=document.getElementById("rutero").value;
-    /*if (payment == 0 || payment == null || payment==" "){
+    var datanio=document.getElementById("anio").value;
+    var datames=document.getElementById("mes").value;
+    /*validacion pago como campo vacio*/
+    if (payment == 0 || payment == null || payment==" "){
         alert("Error campo vacío");
-    } else if ( payment < 0 && payment > 99999999 ){
-        alert("Monto Incorrecto");
-    }else if (rut==0 || rut==" " || rut==null){
-        alert("Campo rut vacio");
-    }else */if (rut.legnth<8 || rut.legnth>10){
-        alert("el rut es incorrecto");
-    }else{
-        alert("validado")
+        /*validacion pago como texto*/
+    } else if(isNaN(rut)){
+        alert("La cantidad no es un numero<br/>");
+        /*validacion pago como monto incorrecto*/
+    }else {var paymentnum = parseInt(payment);
+        if ( paymentnum < 0 || paymentnum > 99999999 ){
+        alert("Monto Incorrecto");}
+    }
+    
+    if(datames = "- Mes -"){
+        alert("No ha seleccionado un Mes");
+    }
+    if(datanio = "- Año -"){
+        alert("No ha seleccionado un Año");
     }
 
 
+
+    /*validacion rut como campo vacio*/
+    if (rut==0 || rut==" " || rut==null){
+        alert("Campo rut vacio");
+        /*validacion rut como rango de numero*/
+    }else {var rutnum = parseInt(rut);
+        if (rutnum<999999 || rutnum.legnth>99999999){
+        alert("el rut es incorrecto");
+    }else{alert("validado");}
+        
+    }
 }    
        
  
