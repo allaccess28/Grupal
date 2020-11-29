@@ -12,10 +12,10 @@
         <h1>Agregar Pago</h1>
     </header>
     <form >
-        <input type="text" placeholder="Ingrese Monto de Pago" id="monto" >
+        <input type="text" placeholder="Ingrese Monto de Pago" id="monto" class="caja">
         <br><br> 
        
-            <select name="DOBMonth" id="mes">
+            <select class="caja" id="mes">
             <option>- Mes -</option>
             <option value="Enero">Enero</option>
             <option value="Febrero">Febrero</option>
@@ -31,7 +31,7 @@
             <option value="Diciembre">Diciembre</option>
             </select>
             <br><br>
-            <select name="DOBYear" id="anio">
+            <select class="caja" id="anio">
             <option>- Año -</option>
             <option value="2050">2050</option>
             <option value="2049">2049</option>
@@ -76,9 +76,9 @@
             <option value="2010">2010</option>
             </select>
             <br><br>
-        <input type="text" placeholder="Ingresa RUT" id="rutero">
+        <input type="text"  class="caja" placeholder="Ingresa RUT" id="rutero">
         <br><br>
-        <input type="button" value="Enviar" onclick="validacionpago()">
+        <input type="button" class="caja" value="Enviar" onclick="validacionpago()">
         <br><br>
     </form>
     

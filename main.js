@@ -128,41 +128,58 @@ document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.ge
 
 function validacionpago(){
     var payment= document.getElementById("monto").value;
+    var colormonto=document.getElementById("monto");
     var rut=document.getElementById("rutero").value;
+    var colorrut=document.getElementById("rutero");
     var datanio=document.getElementById("anio").value;
+    var coloranio=document.getElementById("anio");
     var datames=document.getElementById("mes").value;
+    var colormes=document.getElementById("mes");
     /*validacion pago como campo vacio*/
     if (payment == 0 || payment == null || payment==" "){
         alert("Error campos vacíos");
-        /*validacion pago como texto*/
+        colormonto.style.backgroundColor= "red";
+        
+    /*validacion pago como texto*/
     } else if(isNaN(payment)){
         alert("La cantidad no es un numero");
-        /*validacion pago como monto incorrecto*/
+        colormonto.style.backgroundColor="red";
+
+    /*validacion pago como monto incorrecto*/
     }else {var paymentnum = parseInt(payment);
         if ( paymentnum < 0 || paymentnum > 99999999 ){
         alert("Monto Incorrecto");}
+        colormonto.style.backgroundColor="red";
     }
     
     if(datames == "- Mes -"){
         alert("No ha seleccionado un Mes");
+        colormes.style.backgroundColor="red";
     }else{
     if(datanio == "- Año -"){
         alert("No ha seleccionado un Año");
-    }else {/*validacion rut como campo vacio*/
+        coloranio.style.backgroundColor="red";
+    }else {
+    
+    /*validacion rut como campo vacio*/
     if (rut==0 || rut==" " || rut==null){
         alert("Campo rut vacio");
-        /*validacion rut como rango de numero*/
+        colorrut.style.backgroundColor="red";
+
+    /*validacion rut como rango de numero*/
     }else {var rutnum = parseInt(rut);
         if (rutnum<999999 || rutnum.legnth>99999999){
         alert("el rut es incorrecto");
-    }else{alert("Formulario validado");}
+        colorrut.style.backgroundColor="red";
+    }else{alert("Formulario validado");
+    colormonto.style.backgroundColor= "white";
+    colormes.style.backgroundColor="white";
+    coloranio.style.backgroundColor="white";
+    colorrut.style.backgroundColor="white";}
         
     }}}
-
-
-
-    
+   
 }    
-       
+  
  
 

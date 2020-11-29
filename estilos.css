@@ -182,6 +182,10 @@ table{
     background-color: rgb(35, 105, 122);
 
 }
+.error{
+    
+    background-color: red;
+}
 
 Enviar mensaje a #general
 
