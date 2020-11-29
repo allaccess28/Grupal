@@ -133,35 +133,35 @@ function validacionpago(){
     var datames=document.getElementById("mes").value;
     /*validacion pago como campo vacio*/
     if (payment == 0 || payment == null || payment==" "){
-        alert("Error campo vacío");
+        alert("Error campos vacíos");
         /*validacion pago como texto*/
-    } else if(isNaN(rut)){
-        alert("La cantidad no es un numero<br/>");
+    } else if(isNaN(payment)){
+        alert("La cantidad no es un numero");
         /*validacion pago como monto incorrecto*/
     }else {var paymentnum = parseInt(payment);
         if ( paymentnum < 0 || paymentnum > 99999999 ){
         alert("Monto Incorrecto");}
     }
     
-    if(datames = "- Mes -"){
+    if(datames == "- Mes -"){
         alert("No ha seleccionado un Mes");
-    }
-    if(datanio = "- Año -"){
+    }else{
+    if(datanio == "- Año -"){
         alert("No ha seleccionado un Año");
-    }
-
-
-
-    /*validacion rut como campo vacio*/
+    }else {/*validacion rut como campo vacio*/
     if (rut==0 || rut==" " || rut==null){
         alert("Campo rut vacio");
         /*validacion rut como rango de numero*/
     }else {var rutnum = parseInt(rut);
         if (rutnum<999999 || rutnum.legnth>99999999){
         alert("el rut es incorrecto");
-    }else{alert("validado");}
+    }else{alert("Formulario validado");}
         
-    }
+    }}}
+
+
+
+    
 }    
        
  
