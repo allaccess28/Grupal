@@ -191,6 +191,20 @@ function validacionpago(){
    
 }    
 
+$(document).ready(function () {
+    $('#list1').click(function(){
+        $('#lista1').fadeIn(500);
 
- 
+    }
+    );
+    $("#list1").click(function(){
+            $('#lista1').fadeout(1000);
+    }
+    );
+});
 
+$(document).ready(function () {
+    $("#cambiadorestilo").click(function(){
+        $("cambioestilo1 cambioestilo2 cambioestilo3").toggleClass("egt");
+    });
+});    

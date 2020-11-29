@@ -186,6 +186,42 @@ table{
     background-color: red;
 }
 
+.cambioestilo1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    
+}
+.cambioestilo1 table,td{
+   
+    
+    align-content: center;
+    border:1px solid rgb(255, 36, 255);
+}
+
+.cambioestilo2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(209, 14, 248);
+    
+}
+.cambioestilo2 table,td{
+   
+    
+    align-content: center;
+    border:1px solid rgb(255, 0, 0);
+}
+
+.cambioestilo3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(32, 75, 218);
+    
+}
+.cambioestilo3 table,td{
+   
+    
+    align-content: center;
+    border:1px solid rgb(113, 255, 125);
+}
+
 Enviar mensaje a #general
 
 /* Para teléfonos móviles: */
