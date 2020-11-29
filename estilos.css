@@ -168,9 +168,7 @@ table{
     
     margin-top:-100px;
 }
-.check{
-    
-}
+
 .check form{
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
@@ -182,6 +180,7 @@ table{
     background-color: rgb(35, 105, 122);
 
 }
+/*estilo de los campos formularios en error*/
 .error{
     
     background-color: red;

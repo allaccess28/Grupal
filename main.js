@@ -190,6 +190,7 @@ function validacionpago(){
     
    
 }    
-  
+
+
  
 
