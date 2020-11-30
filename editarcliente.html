@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="estilos.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
     <title>Editar Cliente</title>
 </head>
 <body>
     <h2 align="center">Ingrese los datos del Cliente:</h2>
-		<form action="ejemplo.php" method="get">
-            <input type="text" name="run" size="40" placeholder="Ingrese RUN Cliente">
+		<form id="commentForm" class="cmxform" method="get">
+              <label for="idcliente" class="labelform">RUT:</label>
+              <input type="text" name="run" size="40" placeholder="Ingrese RUN Cliente" id="idcliente">
               <br><br>
-              <input type="text" name="nombres" size="40" placeholder="Ingrese Nombres Cliente">
+              <label for="idnombres" class="labelform">Nombres:</label>
+              <input type="text" name="nombres" size="40" placeholder="Ingrese Nombres Cliente" id="idnombres">
               <br><br>
+              <label for="idapellidos" class="labelform">RUT:</label>
               <input type="text" name="apellidos" size="40" placeholder="Ingrese Apellidos Cliente">
               <br><br>
               <input type="tel" name="telefono" size="40" placeholder="Ingrese Telefono">

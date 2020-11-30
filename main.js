@@ -230,3 +230,6 @@ $(document).ready(function () {
         $(".egt").toggleClass("cambioestilo3");
     });
 });    
+
+/*Funcion validar formulario grupal 9 modulo 3*/
+$("#commentForm").validate();
