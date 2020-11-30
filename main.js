@@ -190,21 +190,43 @@ function validacionpago(){
     
    
 }    
-
+/*Funcion ocultar listas Grupal 7 Modulo3*/
 $(document).ready(function () {
-    $('#list1').click(function(){
-        $('#lista1').fadeIn(500);
-
-    }
-    );
+    $('.listacheck').hide();
     $("#list1").click(function(){
-            $('#lista1').fadeout(1000);
-    }
-    );
-});
+        $('#lista1').fadeToggle(300);
+            
+    });
+    $("#list2").click(function(){
+        $('#lista2').fadeToggle(300);
+            
+    });
+    $("#list3").click(function(){
+        $('#lista3').fadeToggle(300);
+            
+    });
+    $("#list4").click(function(){
+        $('#lista4').fadeToggle(300);
+            
+    });
+    $("#list5").click(function(){
+        $('#lista5').fadeToggle(300);
+            
+    });
 
+
+
+
+});
+/* funcion cambio de estilo Grupal 7 Modulo3*/
 $(document).ready(function () {
-    $("#cambiadorestilo").click(function(){
-        $("cambioestilo1 cambioestilo2 cambioestilo3").toggleClass("egt");
+    $("#cambiadorestilo1").click(function(){
+        $(".egt").toggleClass("cambioestilo1");
+    });
+    $("#cambiadorestilo2").click(function(){
+        $(".egt").toggleClass("cambioestilo2");
+    });
+    $("#cambiadorestilo3").click(function(){
+        $(".egt").toggleClass("cambioestilo3");
     });
 });    

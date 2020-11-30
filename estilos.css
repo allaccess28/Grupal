@@ -180,47 +180,51 @@ table{
     background-color: rgb(35, 105, 122);
 
 }
+.listacheck{
+    list-style: none;
+    border: 2px;
+    background-color: rgb(35, 105, 122);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+}
+#fechas{
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
 /*estilo de los campos formularios en error*/
 .error{
     
     background-color: red;
 }
-
+/*Cambio estilo grupal 7 modulo3*/
 .cambioestilo1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
-    
-}
-.cambioestilo1 table,td{
-   
-    
     align-content: center;
-    border:1px solid rgb(255, 36, 255);
+    border:2px solid rgb(255, 36, 255);
+    padding: 30px;
+    background-color: khaki;
+    
 }
-
 .cambioestilo2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Verdana, sans-serif;
     color: rgb(209, 14, 248);
-    
-}
-.cambioestilo2 table,td{
-   
-    
     align-content: center;
     border:1px solid rgb(255, 0, 0);
+    padding: 50px;
+    background-color: rgb(0, 153, 255);
+}
+.cambioestilo3{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 255, 255);
+    align-content: center;
+    border:4px solid rgb(255, 0, 0);
+    padding: 10px;
+    background-color: rgb(0, 153, 255);
 }
 
-.cambioestilo3{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(32, 75, 218);
-    
-}
-.cambioestilo3 table,td{
-   
-    
-    align-content: center;
-    border:1px solid rgb(113, 255, 125);
-}
 
 Enviar mensaje a #general
 
