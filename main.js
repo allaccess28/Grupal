@@ -232,4 +232,39 @@ $(document).ready(function () {
 });    
 
 /*Funcion validar formulario grupal 9 modulo 3*/
-$("#commentForm").validate();
+jQuery(document).ready(function($) {
+    jQuery("#contacto_formulario").validate({
+    rules: {
+            nombre : {
+            required : true
+            },
+            email : {
+                required : true,
+                email : true
+            },
+            telefono : {
+                required : true,
+                number: true
+            },
+            mensaje : {
+                required : true
+            },
+            },
+            messages: {
+            nombre: {
+                required: "Ingresa un nombre"
+            },
+            email: {
+                required: "Ingresa un email",
+                email: "Ingresa un email válido",
+            },
+            telefono: {
+                required: "Ingresa un número de teléfono",
+                number: "Sólo debes ingresar números"
+            },
+            mensaje: {
+                required: "Ingresa un mensaje"
+            },
+}
+});
+});
