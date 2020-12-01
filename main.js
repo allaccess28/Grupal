@@ -233,7 +233,9 @@ $(document).ready(function () {
 
 /*Funcion validar formulario grupal 9 modulo 3*/
 jQuery(document).ready(function($) {
+    $("form").valid(); // returns true if valid 
     jQuery("#contacto_formulario").validate({
+        
     rules: {
 
             invento:{},
