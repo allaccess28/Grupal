@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="estilos.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <script src="main.js" type="text/javascript"></script>
     <title>Editar Cliente</title>
 </head>
+
 <body>
-    <h2 align="center">Ingrese los datos del Cliente:</h2>
-		<form id="commentForm" class="cmxform" method="get">
-              <label for="idcliente" class="labelform">RUT:</label>
-              <input type="text" name="run" size="40" placeholder="Ingrese RUN Cliente" id="idcliente">
-              <br><br>
-              <label for="idnombres" class="labelform">Nombres:</label>
-              <input type="text" name="nombres" size="40" placeholder="Ingrese Nombres Cliente" id="idnombres">
-              <br><br>
-              <label for="idapellidos" class="labelform">RUT:</label>
-              <input type="text" name="apellidos" size="40" placeholder="Ingrese Apellidos Cliente">
-              <br><br>
-              <input type="tel" name="telefono" size="40" placeholder="Ingrese Telefono">
-              <br><br>
-              <input type="text" name="AFP" size="40" placeholder="Nombre AFP">
-              <br><br>
-              <input type="text" name="sistemasalud" size="40" placeholder="Sistema de Salud">
-              <br><br>
-              <input type="text" name="direccion" size="40" placeholder="Direccion">
-              <br><br>
-              <input type="text" name="comuna" size="40" placeholder="Ingrese Comuna">
-              <br><br>
-              <input type="text" name="edad" size="40" placeholder="Ingrese Edad">
-              <br><br>
-  			<input type="submit" value="Enviar">
-    		<input type="reset" value="Borrar">
-         </form>
-         
-         <form id="contacto_formulario" method="post" action="">
-            <fieldset>
-                <legend>Formulario de contacto</legend>
-                <p>
+
+
+    <form id="contacto_formulario" method="post" action="">
+        <fieldset>
+            <legend>
+                <h1>Formulario de contacto</h1>
+            </legend>
+            <p>
+                <label for="rut" class="rut">RUT:</label>
+                <input type="text" name="rut">
+            </p>
+            <p>
                 <label for="nombre">Nombre</label>
                 <input id="nombre" name="nombre" type="text">
-                </p>
-                <p>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email">
-                </p>
-                <p>
-                <label for="telefono">Teléfono</label>
+            </p>
+            <p>
+                <label for="apellidos">Apellidos</label>
+                <input id="apellidos" name="apellidos" type="text">
+            </p>
+            <p>
+                <label for="telefono">Teléfono +56</label>
                 <input id="telefono" name="telefono" type="text">
-                </p>
-                <p>
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje"></textarea>
-                </p>
-                <p>
+            </p>
+            <p>
+                <label for="direccion">Direccion</label>
+                <input id="direccion" name="direccion" type="text">
+            </p>
+            <p>
+                <label for="comuna">Comuna</label>
+                <input id="comuna" name="comuna" type="text">
+            </p>
+            <p>
+                <label for="afp">AFP</label>
+                <input id="afp" name="afp" type="text">
+            </p>
+            <p>
+                <label for="sistsalud">Salud</label>
+                <input id="sistsalud" name="sistsalud" type="text">
+            </p>
+            <p>
+                <label for="edad">Edad</label>
+                <input id="edad" name="edad" type="text">
+            </p>
+            <p>
                 <input class="submit" type="submit" value="Enviar">
-                </p>
-            </fieldset>
-        </form>
-    
-    
+            </p>
+        </fieldset>
+    </form>
+
+
 </body>
+
 </html>

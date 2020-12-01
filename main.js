@@ -235,8 +235,21 @@ $(document).ready(function () {
 jQuery(document).ready(function($) {
     jQuery("#contacto_formulario").validate({
     rules: {
+
+            invento:{},
+            rut : {
+                required:true,
+                number:true,
+                minlength:"8",
+                maxlength:"10",
+            },
             nombre : {
-            required : true
+                required : true,
+                minlength:"3"
+            },
+            apellidos : {
+                required : true,
+                minlength:"3"
             },
             email : {
                 required : true,
@@ -244,27 +257,69 @@ jQuery(document).ready(function($) {
             },
             telefono : {
                 required : true,
-                number: true
+                number: true,
+                minlength:"9"
             },
-            mensaje : {
+            direccion : {
                 required : true
             },
+            comuna : {
+                required : true
             },
+            afp : {
+                required : true
+            },
+            sistsalud : {
+                required : true
+            },
+            edad : {
+                required : true
+                
+            },
+            },
+
             messages: {
+
+            
+            rut: {
+                required:"Ingresa un Rut",
+                number: "Debes ingresar solo Numeros",
+                minlength: "Por lo menos deben ser 8 cifras",
+                maxlength:"Deben ser maximo 10 cifras"
+            },    
+
             nombre: {
-                required: "Ingresa un nombre"
+                required: "Ingresa un nombre",
+                minlength: "Minimo 3 Caracteres"
             },
-            email: {
-                required: "Ingresa un email",
-                email: "Ingresa un email válido",
+            apellidos: {
+                required: "Ingresa un Apellido",
+                minlength: "Minimo 3 Caracteres"
             },
             telefono: {
                 required: "Ingresa un número de teléfono",
-                number: "Sólo debes ingresar números"
+                number: "Sólo debes ingresar números",
+                minlength:"Debe tener 9 digitos"
             },
-            mensaje: {
-                required: "Ingresa un mensaje"
+            direccion: {
+                required: "Ingresa una Direccion"
+            },
+            comuna: {
+                required: "Ingresa una Comuna"
+            },
+            afp: {
+                required: "Ingresa una AFP"
+            },
+            sistsalud: {
+                required: "Ingresa un Sistema de Salud"
+            },
+            edad: {
+                required: "Ingresa una Edad"
             },
 }
 });
 });
+
+function alerta(){
+    alert("Exitosamente Validado!");
+}
