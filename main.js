@@ -236,7 +236,7 @@ jQuery(document).ready(function($) {
     $("form").valid(); // returns true if valid 
     jQuery("#contacto_formulario").validate({
         
-    rules: {
+        rules: {
 
             invento:{},
             rut : {
@@ -318,10 +318,10 @@ jQuery(document).ready(function($) {
             edad: {
                 required: "Ingresa una Edad"
             },
-}
-});
+            }
+    });
+   
 });
 
-function alerta(){
-    alert("Exitosamente Validado!");
-}
+
+
