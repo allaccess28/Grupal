@@ -1,11 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.chartjs.org/dist/2.9.4/Chart.min.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <link href="estilos.css" rel="stylesheet" type="text/css">
     <title>Reportes</title>
 </head>
+
 <body>
-    
+    <div id="container" style="width: 75%;">
+        <canvas id="canvas"></canvas>
+    </div>
+    <div style="width:75%;">
+        <canvas id="canvas2"></canvas>
+    </div>
+
+   
+
+    <script>
+        /* Grafico de Barras*/
+       
+
+
+
+        var MONTHS = ['Quilpue', 'Viña', 'Quillota', 'Valparaiso'];
+        var color = Chart.helpers.color;
+        var barChartData = {
+            
+
+
+
+            labels: ['Quilpue', 'Viña', 'Quillota', 'Valparaiso'],
+            datasets: [{
+                label: 'Clientes',
+                backgroundColor: color(window.chartColors.yellow).alpha(0.5).rgbString(),
+                borderColor: window.chartColors.orange,
+                borderWidth: 1,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }, {
+                label: 'Ventas',
+                backgroundColor: color(window.chartColors.grey).alpha(0.5).rgbString(),
+                borderColor: window.chartColors.grey,
+                borderWidth: 1,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }]
+
+        };
+        var config = {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+                datasets: [{
+                    label: 'Grafico - Asesorias Accidentes',
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                    backgroundColor: window.chartColors.grey,
+                    borderColor: window.chartColors.grey,
+                    fill: false,
+                    borderDash: [5, 5],
+                    pointRadius: 15,
+                    pointHoverRadius: 10,
+                }, {
+                    label: 'Grafico - Accidentes en Construccion',
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                    backgroundColor: window.chartColors.blue,
+                    borderColor: window.chartColors.blue,
+                    fill: false,
+                    borderDash: [5, 5],
+                    pointRadius: [2, 4, 6, 18, 0, 12, 20],
+                }, {
+                    label: 'Grafico - Accidentes por Quemaduras',
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                    backgroundColor: window.chartColors.green,
+                    borderColor: window.chartColors.green,
+                    fill: false,
+                    pointHoverRadius: 30,
+                }, {
+                    label: 'Grafico - Accidentes automovilisticos',
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                    backgroundColor: window.chartColors.yellow,
+                    borderColor: window.chartColors.yellow,
+                    fill: false,
+                    pointHitRadius: 20,
+                }]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'bottom',
+                },
+                hover: {
+                    mode: 'index'
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Visitas por Accidentes - Grafico de Lineas'
+                }
+            }
+        };
+/*grafico tipo pie*/
+        
+
+		
+
+		
+
+        
+
+        
+
+/*-----------------------------------------*/
+        window.onload = function () {
+            /*funcion para grafico de barras*/
+            var ctx = document.getElementById('canvas').getContext('2d');
+            
+            window.myBar = new Chart(ctx, {
+                type: 'bar',
+                data: barChartData,
+                options: {
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Accidentes por comuna - Gráfico de barras'
+                    }
+                }
+            });/*funcion para grafico de lineas*/
+            var ctx = document.getElementById('canvas2').getContext('2d');
+            window.myLine = new Chart(ctx, config);
+
+           
+
+        };
+        
+		
+
+
+
+    </script>
+
+
 </body>
+
 </html>
